@@ -1,20 +1,20 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-class ThemeProvider extends ChangeNotifier {
-  ThemeData? _selectedTheme;
+// class ThemeProvider extends ChangeNotifier {
+//   ThemeData? _selectedTheme;
 
-  ThemeData light = ThemeData.light().copyWith(primaryColor: Colors.green);
+//   ThemeData light = ThemeData.light().copyWith(primaryColor: Colors.green);
 
-  ThemeData dark = ThemeData.dark().copyWith(primaryColor: Colors.black);
+//   ThemeData dark = ThemeData.dark().copyWith(primaryColor: Colors.black);
 
-  ThemeProvider({bool? isDark}) {
-    _selectedTheme = isDark! ? dark : light;
-  }
+//   ThemeProvider({bool? isDark}) {
+//     _selectedTheme = isDark! ? dark : light;
+//   }
 
-  void swapTheme() {
-    _selectedTheme = _selectedTheme == dark ? light : dark;
-    notifyListeners();
-  }
+//   void swapTheme() {
+//     _selectedTheme = _selectedTheme == dark ? light : dark;
+//     notifyListeners();
+//   }
 
-  ThemeData? get getTheme => _selectedTheme;
-}
+//   ThemeData? get getTheme => _selectedTheme;
+// }

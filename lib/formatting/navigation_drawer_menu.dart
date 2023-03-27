@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_weather/providers/auth/auth_provider.dart';
+import 'package:my_weather/screens/favorites.dart';
+import 'package:my_weather/screens/profile_screen.dart';
+import 'package:my_weather/screens/setting_screen.dart';
+import 'package:provider/provider.dart';
 
 class NavigationDrawerMenu extends StatelessWidget {
   const NavigationDrawerMenu({super.key});
@@ -57,21 +62,21 @@ class NavigationDrawerMenu extends StatelessWidget {
             title: const Text('Profile'),
             leading: const Icon(Icons.person),
             onTap: () {
-              print("Clicked");
+              Navigator.pushNamed(context, ProfileScreen.routeName);
             },
           ),
           ListTile(
             title: const Text('Favorites'),
             leading: const Icon(Icons.favorite),
             onTap: () {
-              print("Clicked");
+              Navigator.pushNamed(context, FavoritesScreen.routeName);
             },
           ),
           ListTile(
             title: const Text('Settings'),
             leading: const Icon(Icons.settings),
             onTap: () {
-              print("Clicked");
+              Navigator.pushNamed(context, SettingsScreen.routeName);
             },
           ),
           const Divider(
@@ -81,7 +86,7 @@ class NavigationDrawerMenu extends StatelessWidget {
             title: const Text('Log out'),
             leading: const Icon(Icons.logout),
             onTap: () {
-              print("Clicked");
+              context.read<AuthProvider>().signout();
             },
           ),
         ],
