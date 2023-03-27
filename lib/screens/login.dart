@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: TextFormField(
                           decoration: InputDecoration(
                             prefixIcon: const Icon(Icons.email),
-                             label: Text(
+                            label: Text(
                               'Enter E-mail',
                               style: TextStyle(
                                 fontStyle: FontStyle.italic,
